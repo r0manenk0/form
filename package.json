@@ -1,12 +1,12 @@
 {
-  "name": "optimizedhtml",
-  "version": "4.0.0",
-  "description": "OptimizedHTML 4 - Start HTML Template",
+  "name": "form",
+  "version": "1.0.0",
+  "description": "form/parking",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "WebDesign Master",
+  "author": "r0manenk0",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.24.4",
