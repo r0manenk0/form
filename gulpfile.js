@@ -18,7 +18,8 @@ gulp.task('browser-sync', function() {
 			baseDir: 'app'
 		},
 		notify: false,
-		// open: false,
+		open: false,
+		browser: 'google-chrome',
 		// online: false, // Work Offline Without Internet Connection
 		// tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
 	})
@@ -37,6 +38,11 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js',
+		'app/libs/steps/jquery.steps.min.js',
+		'app/libs/bootstrap/bootstrap.bundle.min.js',
+		'app/libs/steps/jquery.validate.min.js',
+		'app/libs/datepicker/js/bootstrap-datepicker.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

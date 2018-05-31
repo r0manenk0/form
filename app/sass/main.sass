@@ -2,21 +2,31 @@
 @import "fonts"
 @import "libs"
 
+
 ::placeholder
-	color: #666
+	color: #333
+
+
+
 
 ::selection
 	background-color: $accent
 	color: #fff
+.clearfix
+	&:after
+		content: ""
+		display: table
+		clear: both
 
 body
-	font-size: 16px
+	font-size: 18px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
+	background-color: #F2F2F2
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -37,6 +47,370 @@ body
 
 b, strong
 	font-weight: bold
+
+.navbar
+	background-color: #fff
+	margin-bottom: 70px
+.form-title
+	text-align: center
+	h1
+		font-weight: 400
+		span
+			color: #79a2db
+.form-wrapper
+	background-color: #fff
+	border-radius: 30px
+	padding: 30px
+	margin-top: 100px
+	margin-bottom: 180px
+.datepicker
+	padding: 10px
+
+.wizard>.content
+	background-color: #fff
+.input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control
+	width: 100%
+.form-control-lg
+	line-height: 2.5
+	&::placeholder
+		color: rgba(117, 117, 117, 0.56)
+		opacity: 1
+
+.form-control
+  &::-webkit-input-placeholder, &:-ms-input-placeholder, &:-moz-placeholder, &::-moz-placeholder
+		font-family: 'Lato', Arial, Helvetica, sans-serif
+		font-size: 16px
+.form-group
+ 	margin-bottom: 2rem
+.form-row>.col, .form-row>[class*=col-]
+ 	padding-left: 20px
+ 	padding-right: 20px
+.wizard>.content>.body label.error
+ 	color: #bd5648
+ 	display: inline-block
+ 	margin-left: 0.1em
+ 	font-family: $default-font
+ 	font-size: 14px
+.wizard>.steps>ul>li>a
+	font-size: 16px
+	font-weight: 700
+.wizard
+	.content
+		min-height: 48em
+		position: static
+		margin: 0
+		.body
+			label
+				font-size: 16px
+				color: rgba($text, .6)
+	>.steps
+		left: 0
+		position: absolute
+		top: -85px
+		ul
+			li
+				text-align: center
+				a
+					pointer-events: none
+		.number
+			font-size: 18px
+			font-weight: 700
+			position: relative
+			display: inline-block
+			color: #79a2db
+			margin-right: 20px
+			line-height: 0
+			&:after
+				content: ''
+				background-color: #fff
+				border-radius: 25px
+				display: block
+				width: 50px
+				height: 50px
+				position: absolute
+				top: -25px
+				left: -20px
+				z-index: -1
+
+		.current
+			a
+				background-color: transparent
+				color: #79a2db
+				&:hover
+					background-color: transparent
+					color: #79a2db
+		.disabled
+			a
+				opacity: 0.5
+				background-color: transparent
+				color: #79a2db
+				&:hover
+					background-color: transparent
+					color: #79a2db
+		.done
+			a
+				background-color: transparent
+				color: #79a2db
+				opacity: 0.5
+				&:hover
+					background-color: transparent
+					color: #79a2db
+	.actions
+		position: absolute
+		bottom: -90px
+		left: 0px
+		ul
+			display: flex
+			align-items: stretch
+			li
+				display: flex
+				width: 50%
+				&.disabled
+					opacity: 0
+
+				a
+					padding: 14px 40px
+					width: 100%
+					text-align: center
+					border-radius: 8px
+					color: #fff
+					background-color: #79a2db
+					letter-spacing: 4px
+					text-transform: uppercase
+					opacity: 0.9
+					&:hover
+						padding: 14px 40px
+						border-radius: 8px
+						background-color: #79a2db
+						opacity: 1
+				.ghost-btn
+					opacity: 0.8
+					background-color: transparent
+					border: 1px solid $text1
+					color: $text1
+					&:hover
+						opacity: 1
+						background-color: transparent
+
+.wizard .content
+	min-height: 0
+
+.wizard .content > .body
+	width: 100%
+	height: auto
+	padding: 15px
+	position: relative
+#evidenceq
+	display: none
+	h4
+		color: $text1
+	p
+		font-size: 0.9em
+		color: $text1
+.form-check
+	.form-row>[class*=col-]
+		padding-left: 38px
+	#a1r, #a2r, #a3r, #a5r, #a6r, #a7r, #a8r, #a9r, #a10r, #a11r, #a12r, #a13r, #a14r, #a15r, #explain-choix
+		display: none
+	padding-left: 0
+	input[type=radio]
+		position: absolute
+		visibility: hidden
+	.before-input
+		font-size: 0.8em
+		margin-right: 10px
+		padding-left: 0
+	.above-input
+		font-size: 0.8em
+		padding-left: 0
+		margin-left: 5px
+		margin-bottom: 8px
+	.br-foot
+		margin-left: 5px
+	label
+		display: block
+		position: relative
+		font-weight: 300
+		font-size: 1em
+		color: $text1
+		padding: 0 0 0 34px
+		margin: 10px auto
+		height: 34px
+		z-index: 9
+		cursor: pointer
+		-webkit-transition: all 0.25s linear
+		&:hover label
+			color: #FFFFFF
+	.check
+		display: block
+		position: absolute
+		border: 3px solid #AAAAAA
+		border-radius: 100%
+		height: 20px
+		width: 20px
+		top: 12px
+		left: 0px
+		z-index: 5
+		transition: border .25s linear
+		-webkit-transition: border .25s linear
+		&:hover .check
+			border: 3px solid #FFFFFF
+	.check::before
+		display: block
+		position: absolute
+		content: ''
+		border-radius: 100%
+		height: 10px
+		width: 10px
+		top: 2px
+		left: 2px
+		margin: auto
+		transition: background 0.25s linear
+		-webkit-transition: background 0.25s linear
+
+input[type=radio]:checked ~
+	.check
+		border: 3px solid $accent
+		&:before
+			background: $accent
+			top: 2px
+			left: 2px
+	label
+		color: $accent
+
+
+
+
+
+#help-msg
+	display: none
+	margin-top: 20px
+	label
+		font-size: 0.9em
+		color: $text1
+#a1r, #a1r8
+
+.tooltip
+	opacity: 1
+	font-size: 12px
+.tooltip-inner
+	background-color: $text
+	opacity: 1
+.bs-tooltip-top
+  .arrow
+    bottom: 0
+    &:before
+      border-top-color: $text
+.evdnc
+	padding-left: 4px !important
+
+.pre-icon
+	position: absolute
+	margin-left: 15px
+	height: 38px
+	display: flex
+	align-items: center
+	font-weight: 700
+	color: rgba($text, 0.5)
+#weekly_budget
+	padding-left: 30px
+	margin-left: 5px
+
+.ffinal>.form-row>[class*=col-]
+	padding-left: 5px
+.ffinal
+	.above-input
+		font-size: 0.8em
+		padding-left: 0
+		margin-left: 0px
+		margin-bottom: 8px
+		color: $text1
+	h4
+		color: $text1
+
+#parking-form
+	hr
+		margin: 100px 0px
+.mb100
+	margin-bottom: 80px
+.the-letter
+	opacity: 0.5
+	position: absolute
+	right: 0
+	top: -24px
+	font-size: 16px
+	font-weight: 700
+	color: #79a2db
+#the-letter
+	.form-wrapper
+		margin-top: 70px
+		color: $text1
+		padding: 50px
+		margin-bottom: 30px
+	.alert-wrapper
+		padding: 0
+		.alert
+			background-color: $accent
+			color: #fff
+			padding: 10px 20px
+			border-radius: 100px
+			img
+				padding-right: 6px
+	.square-wrapper
+		padding: 0
+		display: flex
+		margin: 20px 0
+		.square-btn
+			height: 110px
+			width: 110px
+			background-color: #fff
+			border: 1px solid rgba($text1, 0.3)
+			border-radius: 6px
+			margin: 10px
+			text-align: center
+			cursor: pointer
+			&:first-child
+				margin-left: 0
+			a
+				text-decoration: none
+				text-align: center
+				display: block
+				top: calc(50% - 25px)
+				position: relative
+				&:hover
+					text-decoration: none
+				span
+					font-size: 0.7em
+					font-weight: 700
+					line-height: 1.2
+					color: $text1
+					width: 100%
+					display: block
+				img
+					margin-bottom: 10px
+	.whitness
+		padding-top: 0
+		margin-top: 10px
+		.title-line
+			border-top: 2px solid $text1
+			border-bottom: 2px solid $text1
+			text-align: center
+			display: block
+			width: 240px
+			margin: 50px auto
+			h4
+				position: relative
+				text-align: center
+				font-weight: 300
+				display: inline-block
+				margin-bottom: 0.5em
+				margin-top: 0.5em
+				width: 200px
+		.sign
+			font-size: 0.8em
+			padding-left: 24px
+
+
 
 
 

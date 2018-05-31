@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>OptimizedHTML 4</title>
-	<meta name="description" content="">
+	<title>Parking ticket appeals tool</title>
+	<meta name="description" content="Parking ticket appeals tool">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
+
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
-	
+
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
@@ -28,42 +28,419 @@
 
 <body>
 
-	<!-- Custom HTML -->
+	<!-- Fixed top line -->
+	<nav class="navbar fixed-top navbar-light bg-light">
+  	<img src="img/logo.png" alt="logo">
+	</nav>
 
 	<div class="container">
 
 		<div class="row">
-
-			<div class="col-8 offset-2">
-				
-				<img class="img-responsive" src="img/preview.jpg" alt="Start HTML5 Template">
-
-				<br>
-
-				<h2>Welcome to startup HTML template OptimizedHTML 4!</h2>
-
-				<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Ad distinctio animi, dolorum eaque praesentium unde aliquid, mollitia itaque voluptate quos modi et incidunt tempora fugiat voluptatum quia esse dolor repellat.</p>
-				<p>Nemo velit incidunt assumenda, eaque, sequi vitae facilis doloribus qui totam, fuga iure dignissimos ab non praesentium. Vitae similique, corrupti aliquam nam modi explicabo distinctio qui cum officia ullam quam!</p>
-				<p>Aperiam veritatis debitis quibusdam animi totam quos mollitia aspernatur porro consectetur id quod tempore numquam, ullam ex quae quasi voluptatem incidunt placeat asperiores quas autem! Labore modi quae nulla illo!</p>
-
-				<br>
-
-				<div class="row">
-
-					<div class="col-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quo vero molestias, esse doloribus corrupti, nemo minus ullam tempore tenetur magni aut quos soluta sit adipisci eius expedita amet non.</div>
-					<div class="col-6">Odit enim harum minus nam excepturi quae vitae consectetur repudiandae natus neque ab asperiores repellat quo dicta vel accusamus voluptatum rerum autem eaque rem laudantium, sint veritatis. Minus, unde rem.</div>
-
-				</div>
-
-				<br>
-
+			<div class="col-md-12 form-title">
+				<h1>Parking ticket appeals <span>tool</span></h1>
 			</div>
-			
+			<div class="col-md-12 form-wrapper">
+				<form id="parking-form">
+  				<div>
+						<!--       Your Details       -->
+						<h3>Your details</h3>
+						<fieldset>
+  						<div class="form-row">
+  							<div class="form-group col-md-6">
+  				 				<input type="email" class="form-control form-control-lg required" id="inputEmail4" placeholder="Email">
+  							</div>
+  							<div class="form-group col-md-6">
+  				 				<input id="inputZip" name="Postcode" type="text" placeholder="Postcode" class="form-control form-control-lg required">
+  							</div>
+  						</div>
+							<div class="form-row">
+  							<div class="form-group col-md-6">
+  				 				<input id="inputName" name="Name" type="text" placeholder="Name" class="form-control form-control-lg required">
+  							</div>
+  							<div class="form-group col-md-6">
+									<input id="inputCountry" name="Country" type="text" placeholder="Country of residence" class="form-control form-control-lg required">
+  							</div>
+  						</div>
+							<div class="form-row">
+  							<div class="form-group col-md-6">
+  				 				<input type="text" name="Addres1" class="form-control form-control-lg required" id="inputAddress1" placeholder="Address line 1">
+  							</div>
+  							<div class="form-group col-md-6">
+  				 				<input type="text" name="TicketNumber" class="form-control form-control-lg required" id="inputTicketNumber" placeholder="Ticket reference number">
+  							</div>
+  						</div>
+							<div class="form-row">
+  							<div class="form-group col-md-6">
+  				 				<input type="text" name="Addres2" class="form-control form-control-lg required" id="inputAddress2" placeholder="Address line 2">
+  							</div>
+  							<div class="form-group col-md-6 input-group date">
+  				 				<input type="text" id="date1" name="Date" class="form-control form-control-lg required" placeholder="Date of parking event"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+  							</div>
+  						</div>
+							<div class="form-row">
+  							<div class="form-group col-md-6">
+  				 				<input type="text" name="City" class="form-control form-control-lg required" id="inputCity" placeholder="City/Town">
+  							</div>
+  							<div class="form-group col-md-6">
+  				 				<input type="text" name="Location" class="form-control form-control-lg required" id="inputLocation" placeholder="Location of car park">
+  							</div>
+  						</div>
+							<div class="form-row">
+  							<div class="form-group col-md-6">
+  				 				<input type="text" name="Licence" class="form-control form-control-lg required" id="inputLic" placeholder="Licence plate" >
+  							</div>
+  							<div class="form-group col-md-6">
+  				 				<input type="text" name="NameOfParking" class="form-control form-control-lg required" id="inputNameParking" placeholder="Name of parking company">
+									<div class="form-group"  id="help-msg">
+									  <label for="AosQ">Hmm, we don't know that parking company! You can try again by typing the first few letters of its name, and then select it from the autosuggest box. If it's definitely not there, please let us know which accredited trade association (ATA) that company belongs to: <span><img src="img/q.png" alt="" data-toggle="tooltip" data-placement="top" title="Almost all parking companies belong to a trade association – you have to set it manually because we're unable to work out which company you're referring to." id="tooltip"></span></label>
+									  <select class="form-control" id="AosQ">
+									    <option>&nbsp</option>
+									    <option>BPA</option>
+    									<option>IPC</option>
+    									<option>None</option>
+										</select>
+									</div>
+  							</div>
+  						</div>
+  					</fieldset>
+						<!--       Ground of appeal       -->
+						<h3>Ground of appeal</h3>
+						<fieldset>
+							<div class="form-check">
+								<input type="radio" id="appeal" name="appeal" value="1">
+    						<label for="appeal">I did not see the parking signage</label>
+    						<div class="check"><div class="inside"></div></div>
+									<div class="form-row">
+										<div class="col-md-5">
+											<select class="form-control" id="a1r" name="a1r" >
+											  <option value="1">There was no sign at the entrance of the car park</option>
+											  <option value="2">There were no visible signs</option>
+											  <option value="3">The sign was illegible because of vandalism</option>
+											  <option value="4">The sign was obscured by trees</option>
+											  <option value="5">The sign was not clearly worded</option>
+											  <option value="6">The sign was obscured by high sided vehicles</option>
+											  <option value="7">It was dark and the sign was not illuminated in any way</option>
+											   <option value="8">Something else</option>
+											</select>
+										</div>
+										<div class="col-md-5">
+											<span id="a1r8"><textarea  id="explain-choix" class="form-control" name="name" rows="8" cols="80" placeholder="Specifically, I did not see the signs because..."></textarea></span>
+										</div>
+									</div>
+							</div>
+							<div class="form-check">
+								<input type="radio" id="t-option1" name="appeal" value="2">
+    						<label for="t-option1">I paid to park / I own a permit</label>
+    						<div class="check"></div>
+								<div class="form-row">
+									<div class="col-md-5">
+										<select id="a2r" name="evidence" class="form-control required">
+										  <option value="1">The permit fell off the windscreen</option>
+										  <option value="2">I forgot to display the permit</option>
+										  <option value="3">I displayed the permit but got ticketed anyway</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-check">
+								<input type="radio" id="t-option2" name="appeal" value="3">
+    						<label for="t-option2">I paid to park, but entered the wrong license plate on my permit</label>
+    						<div class="check"></div>
+								<div class="form-row">
+									<div class="col-md-8">
+										<div id="a3r">
+											<div class="form-inline">
+													<div class="form-group">
+														<label class="before-input">Registration plate that you mistakenly entered:</label>
+														<input type="text" name="purchasedlicensenumber" class=" form-control" placeholder="License plate on the ticket" id="licnumb">
+													</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-check">
+								<input type="radio" id="t-option3" name="appeal" value="4">
+    						<label for="t-option3">All ticket machines were out of order</label>
+    						<div class="check"></div>
+							</div>
+							<div class="form-check">
+								<input type="radio" id="t-option4" name="appeal" value="5">
+    						<label for="t-option4">I overstayed because I am disabled / injured and needed extra time</label>
+    						<div class="check"></div>
+								<div class="form-row">
+									<div class="col-md-7">
+										<div id="a5r">
+											<div class="form-inline">
+												<div class="form-group">
+													<label for="a5r" class="before-input">Type of injury:</label>
+													<select class="form-control" name="a5r" id="a5r">
+													  <option value="1">Disability</option>
+													  <option value="2">Injury</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-inline">
+												<div class="form-group">
+													<label for="overstay" class="before-input">Amount of overstay (minutes):</label>
+													<input type="number" id="overstay" name="overstay" class="form-control" placeholder="5">
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group">
+													<label for="injury_detail" class="above-input">Specifically, I have (complete the sentence, eg 'a broken foot')</label>
+													<textarea class="form-control br-foot" rows="4" cols="50" name="injury_detail" id="injury_detail" placeholder="a broken foot"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+									</div>
+								</div>
+								<div class="form-check">
+									<input type="radio" id="t-option6" name="appeal" value="6">
+	    						<label for="t-option6">The original parking ticket came in the post, and arrived more than 2 weeks after I overstayed</label>
+	    						<div class="check"></div>
+									<div class="form-row">
+										<div class="col-md-8">
+											<div id="a6r">
+												<div class="form-inline">
+														<div class="form-group">
+															<label class="before-input">Date original parking ticket arrived:</label>
+															<input type="text" id="date2" name="Date" class="form-control " placeholder="mm.dd.yy">
+														</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-check">
+									<input type="radio" id="t-option7" name="appeal" value="7">
+	    						<label for="t-option7">I entered the car park twice, but did not overstay</label>
+	    						<div class="check"></div>
+									<div class="form-row">
+										<div class="col-md-8">
+											<div id="a7r">
+												<div class="form-inline">
+													<div class="form-group">
+														<label for="ftime1" class="before-input">Time at first entry into car park (24 hour format):</label>
+														<input type="time" id="ftime1" name="first_entry_time" class="form-control">
+													</div>
+												</div>
+												<div class="form-inline">
+													<div class="form-group">
+														<label for="ftime2" class="before-input">Estaimte of time spent (minutes): </label>
+														<input type="number" id="ftime2" name="first_entry_duration" class="form-control">
+													</div>
+												</div>
+												<div class="form-inline">
+													<div class="form-group">
+														<label for="ftime3" class="before-input">Time at second entry into car park (24 hour format):</label>
+														<input type="time" id="ftime3" name="second_entry_time" class="form-control">
+													</div>
+												</div>
+												<div class="form-inline">
+													<div class="form-group">
+														<label for="ftime4" class="before-input">Time at second exit (24 hour format):</label>
+														<input type="time" id="ftime4" name="second_entry_exit" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-check">
+									<input type="radio" id="t-option8" name="appeal" value="8">
+	    						<label for="t-option8">My length of overstay was minor (10 mins or less)</label>
+	    						<div class="check"></div>
+									<div class="form-row">
+										<div class="col-md-8">
+											<div id="a8r">
+												<div class="form-inline">
+														<div class="form-group">
+															<label class="before-input">Length of overstay (mins):</label>
+															<input type="number" max=10 name="first_entry_duration" class="form-control">
+														</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-check">
+									<input type="radio" id="t-option9" name="appeal" value="9">
+	    						<label for="t-option9">I needed to sleep</label>
+	    						<div class="check"></div>
+								</div>
+								<div class="form-check">
+									<input type="radio" id="t-option10" name="appeal" value="10">
+	    						<label for="t-option10">I did not own the car at the time of the event</label>
+	    						<div class="check"></div>
+									<div class="form-row">
+										<div class="col-md-8">
+											<div id="a10r">
+												<div class="form-inline">
+														<div class="form-group">
+															<textarea rows="4" cols="50" class="form-control" name="new_keeper_details" placeholder="Enter name and contact details for new / last known car owner (or keeper)" data-msg-required="Please enter information on the new owner / keeper (above)"></textarea>
+														</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-check">
+									<input type="radio" id="t-option11" name="appeal" value="11">
+	    						<label for="t-option11">I own the car but was not driving at the time</label>
+	    						<div class="check"></div>
+									<div class="form-row">
+										<div class="col-md-8">
+											<div id="a11r">
+												<div class="form-inline">
+														<div class="form-group">
+															<textarea rows="4" cols="50" class="form-control" name="driver_details" placeholder="Enter name and contact details for the driver" data-msg-required="Please enter information on how the actual driver can be contacted (above)"></textarea>
+														</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-check">
+									<input type="radio" id="t-option12" name="appeal" value="12">
+	    						<label for="t-option12">I overstayed as I was breast-feeding a child</label>
+	    						<div class="check"></div>
+								</div>
+								<div class="form-check">
+									<input type="radio" id="t-option13" name="appeal" value="13">
+	    						<label for="t-option13">Paying this ticket would cause me undue hardship (eg I am a pensioner / cannot afford it without cutting essential life expenses)</label>
+	    						<div class="check"></div>
+									<div class="form-row">
+										<div class="col-md-8">
+											<div id="a13r">
+												<div class="form-row">
+													<div class="form-group">
+														<label for="weekly_budget" class="above-input"> My weekly budget to pay for essential living costs is:</label>
+														<span class="pre-icon">£</span>
+														<input type="number" class="form-control" id="weekly_budget" name="weekly_budget" placeholder="Enter weekly budget" data-msg-required="Please enter weekly budget as a number only">
+													</div>
+												</div>
+												<div class="form-row">
+												<div class="form-group">
+													<label for="injury_detail" class="above-input">More specifically, the details of my financial situation are as follows:</label>
+													<textarea class="form-control br-foot" rows="4" cols="50" name="injury_detail" id="injury_detail" placeholder="Enter details of financial situation and why ticket is unaffordable"></textarea>
+												</div>
+											</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-check">
+									<input type="radio" id="t-option14" name="appeal" value="14">
+	    						<label for="t-option14">Mitigating circumstances / emergency</label>
+	    						<div class="check"></div>
+									<div class="form-row">
+										<div class="col-md-8">
+											<div id="a14r">
+												<div class="form-row">
+														<div class="form-group">
+															<label for="t-opt" class="above-input">Here is a description of the emergency:</label>
+															<textarea rows="4" cols="50" id="t-opt" class="form-control br-foot" name="driver_details" placeholder="Enter details" data-msg-required="Please enter information on how the actual driver can be contacted (above)"></textarea>
+														</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-check">
+								<input type="radio" id="t-option15" name="appeal" value="15" class="required">
+    						<label for="t-option15">I got the ticket parking somewhere outside of England / Wales</label>
+    						<div class="check"></div>
+								<div class="form-row">
+									<div class="col-md-8">
+										<div id="a15r">
+											<div class="form-inline">
+													<div class="form-group">
+														<label class="before-input required">Country you received parking ticket:</label>
+														<input type="text" name="purchasedlicensenumber" class=" form-control" placeholder="Country">
+													</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Evidance-->
+							<div id="evidenceq">
+        				<h4>Evidence</h4>
+									<p>I can evidence this ground of appeal<img src="img/q.png" alt="" data-toggle="tooltip" data-placement="top" title="Having evidence to back up this ground of appeal is the most likely thing that will make you win: do your best to supply some! If you have none, we will generate a witness statement for you to sign." id="tooltip"></p>
+								<div class="form-row">
+									<div class="col-md-3 evdnc">
+										<select id="evidence" name="evidence" class="form-control required">
+										  <option value="yes">Yes</option>
+										  <option value="no">No</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+						<!--       Final questions       -->
+						<h3>Final questions</h3>
+						<fieldset>
+							<div class="ffinal">
+    						<h4>Parking company authority</h4>
+									<div class="form-row">
+											<div class="col-md-12">
+												<label for="" class="above-input">
+													The parking company has proved it is the landowner, or has shown it has authority to issue the ticket <br>(signed by the landowner): <img src="img/q.png" alt="" data-toggle="tooltip" data-placement="top" title="If the parking company does not have authority to issue the ticket (either by owning the land or having permission from the landowner), they are unlikely to win in court / at an independent appeals process. Did they include signed authority from the landowner to operate a parking scheme, or proof that they own the land?" id="tooltip">
+												</label>
+											</div><div class="col-md-3">
+
+												<select class="form-control" id="park_auth" name="park_auth" >
+												  <option value="">Yes</option>
+												  <option value="">No</option>
+												</select>
+											</div>
+									</div>
+							</div>
+							<hr>
+							<div class="ffinal">
+    						<h4>Counter-claim</h4>
+									<div class="form-row">
+											<div class="col-md-12">
+												<label for="" class="above-input">
+													I am interested in counter-claiming for damages <img src="img/q.png" alt="" data-toggle="tooltip" data-placement="top" title="This means you'd be interested in suing the parking company for compensation (for inconvenience, distress, financial loss) if they refuse to cancel your ticket. Recommended if you have evidence to back up what you say. You do not have to go to court. Select 'yes' if interested – you can get back in touch later if your appeal fails." id="tooltip">
+												</label>
+											</div><div class="col-md-3">
+
+												<select class="form-control" id="park_auth" name="park_auth" >
+												  <option value="">Yes</option>
+												  <option value="">No</option>
+												</select>
+											</div>
+									</div>
+							</div>
+							<hr>
+							<div class="ffinal mb100">
+    						<h4>Mailing List?</h4>
+									<div class="form-row">
+											<div class="col-md-12">
+												<label for="" class="above-input">
+													I sometimes put together other projects like this one to help people affected by consumer problems.<br> Are you happy to receive the occasional email from me so we can stay in touch?<img src="img/q.png" alt="" data-toggle="tooltip" data-placement="top" title="Having a mailing list simply enables me to keep 'on the ground' with current consumer problems, and update you with any interesting projects I am working on." id="tooltip">
+												</label>
+											</div><div class="col-md-3">
+
+												<select class="form-control" id="park_auth" name="park_auth" >
+												  <option value="">Yes</option>
+												  <option value="">No</option>
+												</select>
+											</div>
+									</div>
+							</div>
+						</fieldset>
+  				</div>
+				</form>
+			</div>
+
 		</div>
 
 	</div>
 
 	<script src="js/scripts.min.js"></script>
-
 </body>
 </html>
